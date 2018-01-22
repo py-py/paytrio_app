@@ -1,0 +1,21 @@
+{% extends "base.html" %}}
+{% from "_form_helpers.html" import render_mainfield %}
+
+{% block title %}
+Main Invoice
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-4">
+        <form method="POST">
+            {{ render_mainfield(form.amount) }}
+            {{ render_mainfield(form.currency) }}
+            {{ render_mainfield(form.description) }}
+
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

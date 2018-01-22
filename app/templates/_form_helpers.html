@@ -1,0 +1,20 @@
+{% macro render_mainfield(field) %}
+    <div class="form-group">
+        {{ field.label }}
+        {{ field(class="form-control") }}
+
+        <!--{% if field.errors %}-->
+            <!--{% for error in field.errors %}-->
+                <!--<small class="form-text text-muted">{{ error }}</small>-->
+            <!--{% endfor %}-->
+        <!--{% endif %}-->
+    </div>
+{% endmacro %}
+
+
+{% macro render_usdfield(field) %}
+    <div class="form-group">
+        {{ field(class="form-control") }}
+    </div>
+{% endmacro %}
+
