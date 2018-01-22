@@ -1,7 +1,6 @@
 from flask import Flask
-
-
-from app.log import setup_logging
+# TODO: block for deploying on Heroku
+# from app.log import setup_logging
 from config import config
 
 
@@ -13,8 +12,8 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
-    # log app
-    setup_logging(app)
+    # TODO: block for deploying on Heroku
+    # setup_logging(app)
 
     # blueprints app
     from .main import main as main_blueprint
