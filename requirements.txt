@@ -2,8 +2,6 @@ certifi==2018.1.18
 chardet==3.0.4
 click==6.7
 Flask==0.12.2
-Flask-Script==2.0.6
-Flask-WTF==0.14.2
 get==0.0.38
 gunicorn==19.7.1
 idna==2.6
@@ -16,4 +14,4 @@ query-string==0.0.27
 requests==2.18.4
 urllib3==1.22
 Werkzeug==0.14.1
-WTForms==2.1
+

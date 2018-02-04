@@ -1,0 +1,43 @@
+{% extends "base.html" %}}
+
+{% block title %}
+    USD Invoice
+{% endblock %}
+
+{% block container %}
+    <div class="row">
+        <div class="col-4">
+            <form id="PaymentUSD" name="Pay" method="POST" action="{{ URL }}" accept-charset="UTF-8">
+                <input type="hidden"
+                       name="amount"
+                       value="{{ data["amount"] }}"/>
+                <input type="hidden"
+                       name="currency"
+                       value="{{ data["currency"] }}"/>
+                <input type="hidden"
+                       name="shop_id"
+                       value="{{ data["shop_id"] }}"/>
+                <input type="hidden"
+                       name="sign"
+                       value="{{ data["sign"] }}"/>
+                <input type="hidden"
+                       name="shop_invoice_id"
+                       value="{{ data["shop_invoice_id"] }}"/>
+                <input type="hidden"
+                       name="description"
+                       value="{{ data["description"] }}"/>
+                <input class="btn btn-primary"
+                       type="submit"/>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <!--<script>-->
+    <!--$(document).ready(function () {-->
+    <!--$('#submit').click();-->
+    <!--});-->
+    <!--</script>-->
+{% endblock %}

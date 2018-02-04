@@ -9,3 +9,7 @@ def setup_logging(app):
     handler.setFormatter(formatter)
 
     app.logger.addHandler(handler)
+
+
+# TODO: block for deploying on Heroku
+#setup_logging(app)

@@ -1,0 +1,50 @@
+{% extends "base.html" %}}
+
+{% block title %}
+    Main Invoice
+{% endblock %}
+
+{% block container %}
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="POST">
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input id="amount"
+                           class="form-control"
+                           type="number"
+                           name="amount"
+                           min="0" max="10000"
+                           placeholder="Input the sum of payment"
+                           required value/>
+                </div>
+
+                <div class="form-group">
+                    <label for="currency">Amount</label>
+                    <select id="currency"
+                            class="form-control"
+                            name="currency">
+                        {% for c in currencies %}
+                        <option value="{{ c.name }}">{{ c.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input id="description"
+                           class="form-control"
+                           type="text"
+                           name="description"
+                           placeholder="Input the aim's description" required/>
+                </div>
+
+                <input id="submit"
+                       class="btn btn-primary"
+                       type="submit"/>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

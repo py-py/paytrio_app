@@ -5,6 +5,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret_key'
     SHOP_KEY = os.environ.get('SECRET_SHOP') or 'Ohd5xw4IHaixSqxHj8YgKgkogToslDZVk'
     SHOP_ID = os.environ.get('ID_SHOP') or '306267'
+    DEBUG = True
 
     @staticmethod
     def init_app(app):
@@ -12,7 +13,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    pass
 
 
 class ProductConfig(Config):
