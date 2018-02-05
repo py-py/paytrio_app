@@ -7,7 +7,7 @@
 {% block container %}
     <div class="row">
         <div class="col-4">
-            <form id="PaymentUSD" name="Pay" method="POST" action="{{ URL }}" accept-charset="UTF-8">
+            <form id="PaymentUSD" name="Pay" method="POST" action="{{ data["url"] }}" accept-charset="UTF-8">
                 <input type="hidden"
                        name="amount"
                        value="{{ data["amount"] }}"/>
