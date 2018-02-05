@@ -19,6 +19,8 @@ config_name = os.getenv('APP_CONFIG') or 'default'
 app = Flask(__name__)
 app.config.from_object(config[config_name])
 
+
+# TODO: disable a STANDART LOGGER
 if 'DYNO' in os.environ:
     app.logger.addHandler(logging.StreamHandler(sys.stdout))
     app.logger.setLevel(logging.INFO)
@@ -27,7 +29,6 @@ else:
     handler.setLevel(logging.INFO)
     handler.setFormatter(logging.Formatter('%(asctime)s : %(name)s : %(levelname)s : %(message)s'))
     app.logger.addHandler(handler)
-
 
 
 class InvoiceData:
