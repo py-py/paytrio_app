@@ -14,7 +14,7 @@ from messages import LOG_INVOICE_CREATED, LOG_ERROR_URL, LOG_USDHANDLER_COMPLETE
     LOG_EURHANDLER_RESPONSE_ERROR
 
 # load name of config in OS.ENVIRONMENT
-config_name = os.getenv('APP_CONFIG') or 'default'
+config_name = os.getenv('APP_CONFIG') or 'production'
 
 app = Flask(__name__)
 app.config.from_object(config[config_name])
